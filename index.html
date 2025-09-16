@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botify</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- <script src="https://cdn.botpress.cloud/webchat/v3.2/inject.js" defer></script>
+    <script src="https://files.bpcontent.cloud/2025/09/10/23/20250910235843-IQBYPZ90.js" defer></script> -->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Botify</div>
+            <ul>
+                <li><a href="#quienes-somos">Quiénes Somos</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Convierte la interacción en oportunidad.</h1>
+            <p>Creamos chatbots inteligentes para automatizar tu servicio al cliente, ventas y soporte.</p>
+            <button class="cta-button">Agenda una demo</button>
+        </section>
+
+        <section id="quienes-somos" class="section">
+            <h2>Quiénes Somos</h2>
+            <div class="content-text">
+                <p>En **Botify Solutions**, somos un equipo de expertos en inteligencia artificial y desarrollo de software con la misión de transformar la comunicación entre las empresas y sus clientes. Desde 2020, estamos ayudando a optimizar sus operaciones, reducir costos y mejorar la satisfacción del cliente a través de soluciones conversacionales personalizadas.</p>
+            </div>
+        </section>
+
+        <section id="beneficios" class="section features">
+            <h2>Beneficios de un Chatbot</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>Atención 24/7</h3>
+                    <p>Responde a las consultas de tus clientes en cualquier momento, sin interrupciones.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Reducción de Costos</h3>
+                    <p>Automatiza tareas repetitivas y libera a tu equipo para focarse en lo importante.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Aumento de Ventas</h3>
+                    <p>Guía a los usuarios a través del embudo de ventas y genera leads cualificados.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="productos" class="section plans">
+            <h2>Nuestros Productos</h2>
+            <div class="plan-grid">
+                <div class="plan-card">
+                    <h3>Chatbot de Soporte</h3>
+                    <p>Solución ideal para resolver dudas frecuentes, gestionar tickets y brindar soporte técnico.</p>
+                    <a href="#" class="plan-button">Ver Detalles</a>
+                </div>
+                <div class="plan-card">
+                    <h3>Chatbot de Ventas</h3>
+                    <p>Diseñado para calificar leads, agendar reuniones y cerrar ventas directamente.</p>
+                    <a href="#" class="plan-button">Ver Detalles</a>
+                </div>
+                <div class="plan-card">
+                    <h3>Chatbot a Medida</h3>
+                    <p>Creamos una solución personalizada que se integra perfectamente con tus sistemas.</p>
+                    <a href="#" class="plan-button">Ver Detalles</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <button id="chatbot-toggle-button" class="chatbot-button" title="Asistencia por Chatbot">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-1 15.5V16h2v1.5h-2zm0-2V9h2v6.5h-2z" />
+        </svg>
+    </button>
+    
+    <div id="chatbot-container" class="chatbot-container hidden">
+        <div class="chatbot-header">
+            <h3>Asistente Botify</h3>
+            <button id="chatbot-close-button">&times;</button>
+        </div>
+        <div class="chatbot-body">
+            <p>¡Hola! Soy el asistente de Botify. ¿Te gustaría saber más sobre nuestros productos?</p>
+        </div>
+        <div class="chatbot-footer">
+            <input type="text" placeholder="Escribe tu mensaje..." disabled>
+            <button disabled>Enviar</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Botify Solutions. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
