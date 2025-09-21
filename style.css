@@ -1,25 +1,38 @@
 :root {
-    --primary-color: #5d56f9;
-    --secondary-color: #4a41f1;
-    --background-color: #f0f2f5;
-    --text-color: #333;
-    --light-text-color: #fff;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --primary-color: #17c6f1;
+    --background-color: #2e3440; 
+    --surface-color: #3b4252;
+    --text-color: #e5e9f0; 
+    --shadow-light: -6px -6px 12px rgba(255, 255, 255, 0.05);
+    --shadow-dark: 6px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.background-image {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/background_blue2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Mueve el div detrás del resto del contenido */
+    opacity: 0.5; 
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
+    background-color: var(--background-color); 
     color: var(--text-color);
     line-height: 1.6;
 }
 
 header {
-    background-size:cover;
-    background-repeat: no-repeat;
-    box-shadow: var(--shadow);
+    background-color: var(--surface-color);
+    box-shadow: var(--shadow-dark), var(--shadow-light);
     padding: 1rem 2rem;
 }
 
@@ -31,10 +44,8 @@ nav {
     margin: 0 auto;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--primary-color);
+.logo img {
+    height: 60px;
 }
 
 nav ul {
@@ -57,16 +68,16 @@ nav a:hover {
 }
 
 .hero {
-    background: linear-gradient(to right, #5d56f9, #4a41f1);
-    color: var(--light-text-color);
+    background: var(--background-color);
+    color: var(--text-color);
     text-align: center;
     padding: 4rem 2rem;
-    box-shadow: var(--shadow);
 }
 
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: var(--primary-color);
 }
 
 .hero p {
@@ -76,20 +87,20 @@ nav a:hover {
 }
 
 .cta-button {
-    background-color: #ffffff;
-    color: var(--secondary-color);
+    background-color: var(--surface-color);
+    color: var(--primary-color);
     padding: 0.8rem 2rem;
     border-radius: 50px;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
     border: none;
     cursor: pointer;
+    box-shadow: var(--shadow-dark), var(--shadow-light);
 }
 
 .cta-button:hover {
-    background-color: #ffffff;;
-    transform: translateY(-2px);
+    box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.2), inset -6px -6px 12px rgba(255, 255, 255, 0.05);
 }
 
 .section {
@@ -122,15 +133,15 @@ nav a:hover {
 }
 
 .feature-item, .plan-card {
-    background-color: var(--light-text-color);
+    background-color: var(--surface-color);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease;
+    box-shadow: var(--shadow-dark), var(--shadow-light);
+    transition: all 0.3s ease;
 }
 
 .feature-item:hover, .plan-card:hover {
-    transform: translateY(-5px);
+    box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.2), inset -6px -6px 12px rgba(255, 255, 255, 0.05);
 }
 
 .feature-item h3, .plan-card h3 {
@@ -139,22 +150,23 @@ nav a:hover {
 }
 
 .plan-button {
-    background-color: var(--primary-color);
-    color: var(--light-text-color);
+    background-color: var(--surface-color);
+    color: var(--primary-color);
     padding: 0.8rem 2rem;
     border-radius: 5px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     display: inline-block;
     margin-top: 1rem;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-dark), var(--shadow-light);
 }
 
 .plan-button:hover {
-    background-color: var(--secondary-color);
+    box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.2), inset -6px -6px 12px rgba(255, 255, 255, 0.05);
 }
 
-/* Estilos para el chatbot (mismos que el ejemplo del banco) */
+/* Estilos del chatbot (actualizados para el dark mode) */
 .chatbot-button {
     position: fixed;
     bottom: 2rem;
@@ -163,10 +175,10 @@ nav a:hover {
     height: 60px;
     border-radius: 50%;
     background-color: var(--primary-color);
-    color: var(--light-text-color);
+    color: var(--background-color);
     border: none;
     cursor: pointer;
-    box-shadow: var(--shadow);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -189,9 +201,9 @@ nav a:hover {
     right: 2rem;
     width: 350px;
     height: 450px;
-    background-color: var(--light-text-color);
+    background-color: var(--surface-color);
     border-radius: 10px;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-dark), var(--shadow-light);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -208,7 +220,7 @@ nav a:hover {
 
 .chatbot-header {
     background-color: var(--primary-color);
-    color: var(--light-text-color);
+    color: var(--background-color);
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -222,7 +234,7 @@ nav a:hover {
 .chatbot-header button {
     background: none;
     border: none;
-    color: var(--light-text-color);
+    color: var(--background-color);
     font-size: 1.5rem;
     cursor: pointer;
 }
@@ -231,35 +243,47 @@ nav a:hover {
     flex-grow: 1;
     padding: 1rem;
     overflow-y: auto;
-    background-color: #f1f5f9;
+    background-color: var(--background-color);
+    border-top: 1px solid var(--primary-color);
 }
 
 .chatbot-footer {
     padding: 1rem;
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid var(--primary-color);
     display: flex;
     gap: 0.5rem;
+    background-color: var(--background-color);
 }
 
 .chatbot-footer input {
     flex-grow: 1;
-    border: 1px solid #ccc;
+    background-color: var(--surface-color);
+    border: none;
+    color: var(--text-color);
     border-radius: 20px;
     padding: 0.5rem 1rem;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2), inset -2px -2px 5px rgba(255, 255, 255, 0.05);
 }
 
 .chatbot-footer button {
     background-color: var(--primary-color);
-    color: var(--light-text-color);
+    color: var(--background-color);
     border: none;
     border-radius: 20px;
     padding: 0.5rem 1rem;
     cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.chatbot-footer button:hover {
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #e9ecef;
+    background-color: var(--surface-color);
     color: var(--text-color);
+    box-shadow: var(--shadow-light), var(--shadow-dark);
 }
