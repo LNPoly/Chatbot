@@ -1,0 +1,214 @@
+:root {
+    --primary-color: #f1b017;
+    --background-color: #402e2e; 
+    --surface-color: #523b3b;
+    --text-color: #f0e5e5; 
+    --shadow-light: -6px -6px 12px rgba(255, 255, 255, 0.05);
+    --shadow-dark: 6px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.background-image {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/panaderia_fondo.jpg!d);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Mueve el div detrás del resto del contenido */
+    opacity:  0.5; 
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color); 
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--surface-color);
+    box-shadow: var(--shadow-dark), var(--shadow-light);
+    padding: 1rem 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 150px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* main */
+.hero {
+    /* background: var(--background-color); */
+    color: var(--text-color);
+    text-shadow: var(--background-color) 2px 2px 2px;
+    text-align: center;
+    padding: 2rem 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    
+}
+
+.hero p {
+    padding: 2rem;
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.cards, .galery{
+    width: 90%;
+    margin: 0 auto;
+}
+.cards{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+.card-item{
+    margin: 0 20px;
+}
+.card-img{
+    height: 300px;
+    width: 300px;
+}
+
+/*Carrousel*/
+.galery h2{
+    margin:0 461px;
+}
+
+.carousel-item {
+    height: 70vh; 
+    
+}
+
+.carousel-item img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 25px;    
+}
+
+#carouselExampleCaptions .carousel-item {
+    height: 450px;
+}
+
+#carouselExampleCaptions .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.galery .carousel-inner .carousel-caption h5,.galery .carousel-inner .carousel-caption p{
+    text-shadow: #402e2e 2px 2px 2px;
+}
+
+.section {
+    padding: 2rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section h2, .galery h2, .contacto h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    text-shadow: var(--background-color) 2px 2px 2px;
+}
+
+.content-text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1rem;
+    /* text-align: justify; */
+}
+
+.features {
+    text-align: center;
+}
+
+.feature-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.feature-item{
+    background-color: var(--surface-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow-dark), var(--shadow-light);
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.2), inset -6px -6px 12px rgba(255, 255, 255, 0.05);
+}
+
+.feature-item h3{
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+.feature-item p{
+    color: var(--primary-color);
+}
+
+.contacto{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.contacto .btn{
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    margin: 40px auto;
+    transition: 0.5s;
+}
+.contacto .btn:hover{
+    background-color: var(--primary-color);
+    color: var(--surface-color);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    box-shadow: var(--shadow-light), var(--shadow-dark);
+}
