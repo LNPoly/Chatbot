@@ -109,7 +109,7 @@ nav a:hover {
 
 /*Carrousel*/
 .galery h2{
-    margin:0 461px;
+    margin:0 auto 2rem;
 }
 
 .carousel-item {
@@ -211,4 +211,117 @@ footer {
     background-color: var(--surface-color);
     color: var(--text-color);
     box-shadow: var(--shadow-light), var(--shadow-dark);
+}
+
+/*estilos para el responsive*/
+
+/* Estilos para pantallas medianas y pequeñas (máx. 768px) */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    nav {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .logo img {
+        height: 100px; 
+        margin-bottom: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column; 
+        gap: 0.5rem; 
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; 
+    }
+
+    .hero p {
+        padding: 1rem;
+    }
+
+    .cards {
+        flex-direction: column; 
+    }
+
+    .card-item {
+        margin: 1rem 0;
+    }
+
+    .card-img {
+        height: auto; 
+        width: 100%;
+        max-width: 300px; 
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* Carrusel */
+    #carouselExampleCaptions .carousel-item {
+        height: 300px; 
+    }
+    
+    .galery .carousel-inner .carousel-caption {
+        padding-bottom: 0.5rem; 
+    }
+    
+    .galery .carousel-inner .carousel-caption h5 {
+        font-size: 1.25rem;
+    }
+    
+    .galery .carousel-inner .carousel-caption p {
+        font-size: 0.8rem;
+    }
+    
+    .contacto {
+        width: 80%; 
+    }
+    
+    .section {
+        padding: 1rem;
+    }
+}
+
+/* Estilos para pantallas pequeñas (móviles - máx. 480px) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+    
+    .section h2, .galery h2, .contacto h2 {
+        font-size: 1.5rem;
+    }
+    
+    .feature-grid{
+        grid-template-columns: 1fr; 
+    }
+    
+    .feature-item{
+        padding: 1.5rem;
+    }
+
+    #carouselExampleCaptions .carousel-item {
+        height: 250px; 
+    }
+    
+    .galery .carousel-inner .carousel-caption h5 {
+        font-size: 1rem;
+    }
+    
+    .galery .carousel-inner .carousel-caption p {
+        
+        display: none; 
+    }
+    
+    .contacto {
+        width: 95%; 
+    }
 }
